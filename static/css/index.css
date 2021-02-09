@@ -1,0 +1,138 @@
+/* 博客首页的样式 */
+body {
+  background-image: url(../images/blue-snow.png);
+}
+
+.blog-header-tb-mini {
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
+}
+
+.blog-padded-mini {
+  padding: 0.3em !important;
+}
+
+.blog-padded-small {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+}
+
+.blog-padded {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+
+.blog-padded-large {
+  padding: 2em 1.5em !important;
+}
+
+.blog-padded-big {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+.blog-padded-huge {
+  padding-top: 4em !important;
+  padding-bottom: 4em !important;
+}
+
+.blog-padded-maxsive {
+  padding-top: 5em !important;
+  padding-bottom: 5em !important;
+}
+
+.blog-wechat-image-size {
+  width: 110px;
+}
+
+.blog-margin-tiny {
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+}
+
+.blog-wechat-size {
+  width: 15em !important;
+}
+
+.blog-margin-top-large {
+  margin-top: 2em !important
+}
+
+/* text */
+.blog-text {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+  line-height: 1.8;
+}
+
+.blog-text-thin {
+  font-weight: 300 !important;
+}
+
+.blog-text-spaced {
+  letter-spacing: 1px !important;
+}
+
+.blog-text-lined {
+  line-height: 1.8;
+}
+
+.blog-opacity-mini {
+  opacity: 0.8 !important;
+}
+
+/* display */
+
+.blog-inline-block {
+  display: inline-block;
+}
+
+.blog-container {
+  max-width: 72em !important;
+  margin: auto !important;
+}
+
+.blog-top-button {
+  position: absolute;
+  top: 1.2em;
+  right: 2em;
+}
+
+.blog-mobile-show {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+
+  .blog-nav-mobile-hide {
+    display: none !important;
+  }
+
+  .blog-mobile-show {
+    display: block !important;
+  }
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(218, 154, 248);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #da5fff;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f6f6f6;
+}
