@@ -1,0 +1,12 @@
+/* 博客详情页的样式 */
+.pay-qr-code {
+  width: 150px;
+}
+
+.pay-font {
+  font-size: inherit !important;
+}
+
+.comment-margin-bottom-small {
+  margin-bottom: 0.5em !important;
+}
