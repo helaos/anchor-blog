@@ -117,6 +117,13 @@ body {
   display: none !important;
 }
 
+/* 顶栏阴影 */
+.blog-nav-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2) !important;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .2) !important;
+}
+
+
 @media screen and (max-width: 768px) {
 
   .blog-nav-mobile-hide {
@@ -128,6 +135,10 @@ body {
   }
 
   .blog-padded-lr {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .blog-mobile-lr-clear {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
