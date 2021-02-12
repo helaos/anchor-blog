@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客管理(・ω&lt; )★</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+  <link href="./../static/css/index.css" rel="stylesheet">
+  <!-- 网站 ico -->
+  <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+  <!-- 顶栏 -->
+  <header class="ui inverted attached segment blog-header-tb-mini blog-nav-shadow">
+    <!-- 导航栏容器 -->
+    <section class="ui inverted container">
+      <nav class="ui inverted secondary stackable menu">
+        <h2 class="ui teal header item">Anchor-admin</h2>
+        <a href="#" class="nav-item item blog-nav-mobile-hide active"><i class="icon home"></i>首页</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon idea"></i>分类</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon tags"></i>标签</a>
+        
+        <div class="right menu nav-item blog-nav-mobile-hide">
+          <div class="ui dropdown item">
+            <div class="text">
+              <img src="../static/images/default.png" alt="用户头像" class="ui avatar image">Cifanse
+            </div>
+            <i class="icon dropdown"></i>
+            <div class="menu">
+              <a href="#" class="item">注销</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <a href="#" id="show-button" class="ui black icon button blog-top-button blog-mobile-show">
+      <i class="icon sidebar"></i>
+    </a>
+  </header>
+  <!-- 选项框 -->
+  <section class="ui attached pointing menu">
+    <div class="ui container">
+      <div class="right menu">
+        <a href="#" class="item">发布</a>
+        <a href="#" class="active pink item">发布</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中间主要内容内容 -->
+  <main class="blog-container-small blog-padded-big">
+    <!-- 管理内容容器 -->
+    <section class="ui container">
+      <form action="#" method="post" class="ui segment form">
+        <div class="inline fields">
+          <div class="field">
+            <input type="text" name="title" placeholder="标题">
+          </div>
+          <div class="field">
+            <div class="ui selection dropdown">
+              <input type="hidden" name="type">
+              <i class="icon dropdown"></i>
+              <div class="default text">分类</div>
+              <div class="menu">
+                <div class="item" data-value="1">错误日志</div>
+                <div class="item" data-value="2">开发手册</div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" id="recommend" name="recommend">
+              <label for="recommend">
+                推荐
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <button class="ui mini violet basic button">
+              <i class="icon search"></i>
+              搜索
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <table class="ui striped purple celled table center aligned">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>标题</th>
+            <th>类型</th>
+            <th>推荐</th>
+            <th>更新时间</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>刻意练习清单</td>
+            <td>认知升级</td>
+            <td>是</td>
+            <td>2017-10-02 09:45</td>
+            <td>
+              <a href="#" class="ui mini yellow basic button">编辑</a>
+              <a href="#" class="ui mini red basic button">删除</a>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="6">
+              <div class="ui mini floated pagination menu">
+                <a class="icon item">
+                  <i class="left icon arrow"></i>
+                </a>
+                <a class="item">1</a>
+                <a class="item">2</a>
+                <a class="item">3</a>
+                <a class="item">...</a>
+                <a class="item">14</a>
+                <a class="item">15</a>
+                <a class="item">16</a>
+                <a class="icon item">
+                  <i class="right icon arrow"></i>
+                </a>
+              </div>
+              <a href="#" class="ui mini green basic right floated button"><i class="icon add"></i>新增</a>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="ui inverted vertical segment blog-padded-maxsive">
+    <section class="ui center aligned container">
+      <div class="ui stackable grid inverted divided">
+        <div class="three wide column">
+          <div class="ui inverted link list">
+            <div class="item">
+              <img src="./../static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+            </div>
+          </div>
+        </div>
+        <section class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">最新博客</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">用户故事</a>
+            <a href="#" class="item">非常一般</a>
+            <a href="#" class="item">不知道干啥（？？？）</a>
+          </div>
+        </section>
+        <address class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">联系我</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Email：scpcrow@outlook.com</a>
+            <a href="#" class="item">QQ：1182256904</a>
+          </div>
+        </address>
+        <section class="seven wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">anchor-blog</h4>
+          <p class="blog-text-thin blog-text-spaced blog-opacity-mini">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Tempore et veritatis ab animi architecto nostrum
+            nisi soluta nemo dolores atque error, culpa quasi ipsa minus optio esse sunt sed at.</p>
+        </section>
+      </div>
+      <!-- 分割线 -->
+      <div class="ui inverted section divider"></div>
+      <small class="blog-text-thin blog-text-spaced blog-opacity-mini">
+        Copyright &copy; 2020 - 2021 anchor-blog Designed by helaos
+      </small>
+    </section>
+  </footer>
+
+  <!-- 导入框架 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script>
+    $('#show-button').click(function () {
+      $('.nav-item').toggleClass('blog-nav-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown();
+  </script>
+</body>
+
+</html>
