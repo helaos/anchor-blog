@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于沉默的我(・ω&lt; )★</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+  <link href="./static/css/index.css" rel="stylesheet">
+  <!-- 网站 ico -->
+  <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+  <!-- 顶栏 -->
+  <header class="ui inverted attached segment blog-header-tb-mini blog-nav-shadow">
+    <!-- 导航栏容器 -->
+    <section class="ui inverted container">
+      <nav class="ui inverted secondary stackable menu">
+        <h2 class="ui teal header item">Anchor</h2>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon home"></i>首页</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon idea"></i>分类</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon tags"></i>标签</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon clone"></i>归档</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide active"><i class="icon info"></i>关于我</a>
+        <!-- 搜索框容器 -->
+        <section class="nav-item right item blog-nav-mobile-hide">
+          <div class="ui inverted transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="icon search link"></i>
+          </div>
+        </section>
+      </nav>
+    </section>
+    <a href="#" id="show-button" class="ui black icon button blog-top-button blog-mobile-show">
+      <i class="icon sidebar"></i>
+    </a>
+  </header>
+
+  <!-- 中间主要内容内容 -->
+  <main class="blog-container blog-padded-big">
+    <!-- 关于我内容容器 -->
+    <section class="ui container">
+      <section class="ui stackable grid">
+        <div class="eleven wide column">
+          <div class="ui segment">
+            <img src="./static/images/me.png" alt="个人图片" class="ui rounded image">
+          </div>
+        </div>
+        <aside class="five wide column">
+          <div class="ui top attached segment">
+            <div class="ui header">关于我</div>
+          </div>
+          <!-- 描述 -->
+          <div class="ui attached segment">
+            <p class="blog-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui optio impedit doloremque dignissimos in facilis.</p>
+            <p class="blog-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <!-- 标签 -->
+          <div class="ui attached segment">
+            <div class="ui orange basic left pointing label blog-margin-tiny">编程</div>
+            <div class="ui orange basic left pointing label blog-margin-tiny">米粉</div>
+            <div class="ui orange basic left pointing label blog-margin-tiny">协助</div>
+            <div class="ui orange basic left pointing label blog-margin-tiny">编程</div>
+          </div>
+          <div class="ui attached segment">
+            <div class="ui violet basic left pointing label blog-margin-tiny">Java</div>
+            <div class="ui violet basic left pointing label blog-margin-tiny">MySQL</div>
+            <div class="ui violet basic left pointing label blog-margin-tiny">rust</div>
+            <div class="ui violet basic left pointing label blog-margin-tiny">c++</div>
+          </div>
+          <!-- 链接 -->
+          <div class="ui bottom attached segment">
+            <a href="https://github.com/helaos" target="_blank" class="ui circular button icon"><i class="icon github"></i></a>
+            <a href="javascript:;" class="ui circular button icon wechat"><i class="icon weixin"></i></a>
+            <a href="javascript:;" class="ui circular button icon qq-show" data-content="1182256904" data-position="bottom center"><i class="icon qq"></i></a>
+          </div>
+
+          <div class="ui wechat-qr flowing popup transition hidden">
+            <img src="./static/images/WeChat.jpg" alt="微信二维码" class="ui rounded image blog-wechat-image-size">
+          </div>
+        </aside>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="ui inverted vertical segment blog-padded-maxsive">
+    <section class="ui center aligned container">
+      <div class="ui stackable grid inverted divided">
+        <div class="three wide column">
+          <div class="ui inverted link list">
+            <div class="item">
+              <img src="./static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+            </div>
+          </div>
+        </div>
+        <section class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">最新博客</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">用户故事</a>
+            <a href="#" class="item">非常一般</a>
+            <a href="#" class="item">不知道干啥（？？？）</a>
+          </div>
+        </section>
+        <address class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">联系我</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Email：scpcrow@outlook.com</a>
+            <a href="#" class="item">QQ：1182256904</a>
+          </div>
+        </address>
+        <section class="seven wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">anchor-blog</h4>
+          <p class="blog-text-thin blog-text-spaced blog-opacity-mini">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Tempore et veritatis ab animi architecto nostrum
+            nisi soluta nemo dolores atque error, culpa quasi ipsa minus optio esse sunt sed at.</p>
+        </section>
+      </div>
+      <!-- 分割线 -->
+      <div class="ui inverted section divider"></div>
+      <small class="blog-text-thin blog-text-spaced blog-opacity-mini">
+        Copyright &copy; 2020 - 2021 anchor-blog Designed by helaos
+      </small>
+    </section>
+  </footer>
+
+  <!-- 导入框架 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script>
+    $('#show-button').click(function () {
+      $('.nav-item').toggleClass('blog-nav-mobile-hide');
+    });
+
+    // QQ号码显示
+    $('.qq-show').popup();
+
+    // 微信显示
+    $('.wechat').popup({
+      popup: $('.wechat-qr.popup'),
+      position: 'bottom center' 
+    });
+  </script>
+</body>
+
+</html>
