@@ -7,6 +7,8 @@
   <title>博客发布(・ω&lt; )★</title>
   <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
   <link href="./../static/css/index.css" rel="stylesheet">
+  <!-- markdown依赖 -->
+  <link href="./../static/lib/editor.md/css/editormd.min.css" rel="stylesheet">
   <!-- 网站 ico -->
   <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
 </head>
@@ -74,7 +76,33 @@
 
         <!-- 文章编辑器 -->
         <div class="field">
-          <textarea name="content" cols="30" rows="10" placeholder="博客内容"></textarea>
+          <div id="editormd-content" style="z-index: 1 !important;">
+            <textarea name="content" placeholder="博客内容" style="display: none;">[TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+
+#### Editor.md directory
+
+    editor.md/
+            lib/
+            css/
+            scss/
+            tests/
+            fonts/
+            images/
+            plugins/
+            examples/
+            languages/
+            editormd.js
+            ...
+            </textarea>
+          </div>
         </div>
 
         <!-- 文章标签与类型 -->
@@ -202,7 +230,20 @@
   <!-- 导入框架 -->
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <!-- markdown依赖 -->
+  <script src="./../static/lib/editor.md/editormd.min.js"></script>
   <script>
+    // 初始化编辑器
+
+    $(function () {
+      let contentEditor = editormd('editormd-content', {
+        width: "100%",
+        height: 640,
+        syncScrolling: "single",
+        path: "./../static/lib/editor.md/lib/"
+      });
+    });
+
     $('#show-button').click(function () {
       $('.nav-item').toggleClass('blog-nav-mobile-hide');
     });
