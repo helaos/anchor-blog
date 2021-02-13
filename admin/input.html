@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客发布(・ω&lt; )★</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+  <link href="./../static/css/index.css" rel="stylesheet">
+  <!-- 网站 ico -->
+  <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+  <!-- 顶栏 -->
+  <header class="ui inverted attached segment blog-header-tb-mini blog-nav-shadow">
+    <!-- 导航栏容器 -->
+    <section class="ui inverted container">
+      <nav class="ui inverted secondary stackable menu">
+        <h2 class="ui teal header item">Anchor-admin</h2>
+        <a href="#" class="nav-item item blog-nav-mobile-hide active"><i class="icon home"></i>首页</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon idea"></i>分类</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon tags"></i>标签</a>
+        
+        <div class="right menu nav-item blog-nav-mobile-hide">
+          <div class="ui dropdown item">
+            <div class="text">
+              <img src="../static/images/default.png" alt="用户头像" class="ui avatar image">Cifanse
+            </div>
+            <i class="icon dropdown"></i>
+            <div class="menu">
+              <a href="#" class="item">注销</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <a href="#" id="show-button" class="ui black icon button blog-top-button blog-mobile-show">
+      <i class="icon sidebar"></i>
+    </a>
+  </header>
+  <!-- 选项框 -->
+  <section class="ui attached pointing menu">
+    <div class="ui container">
+      <div class="right menu">
+        <a href="#" class="active pink item">发布</a>
+        <a href="#" class="item">发布</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中间主要内容内容 -->
+  <main class="blog-container-small blog-padded-big">
+    <!-- 发布内容容器 -->
+    <section class="ui container">
+      <form action="#" method="post" class="ui form">
+        <!-- 文章类型 -->
+        <div class="required field">
+          <div class="ui left labeled input">
+            <div class="ui selection compact dropdown label violet basic">
+              <input type="hidden" value="原创">
+              <i class="icon dropdown"></i>
+              <div class="text">原创</div>
+              <div class="menu">
+                <div class="item" data-value="原创">原创</div>
+                <div class="item" data-value="转载">转载</div>
+                <div class="item" data-value="翻译">翻译</div>
+              </div>
+            </div>
+            <!-- 文章标题框 -->
+            <input type="text" name="title" placeholder="文章标题">
+          </div>
+        </div>
+
+        <!-- 文章编辑器 -->
+        <div class="field">
+          <textarea name="content" cols="30" rows="10" placeholder="博客内容"></textarea>
+        </div>
+
+        <!-- 文章标签与类型 -->
+        <div class="two fields">
+          <div class="field">
+            <div class="ui left labeled action input">
+              <label class="ui compact orange basic label">分类</label>
+              <div class="ui fluid selection dropdown">
+                <input type="hidden" name="type">
+                <i class="icon dropdown"></i>
+                <div class="default text">分类</div>
+                <div class="menu">
+                  <div class="item" data-value="1">错误日志</div>
+                  <div class="item" data-value="2">开发者选项</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left labeled action input">
+              <label class="ui compact pink basic label">标签</label>
+              <div class="ui fluid selection multiple search dropdown">
+                <input type="hidden" name="tag">
+                <i class="icon dropdown"></i>
+                <div class="default text">标签</div>
+                <div class="menu">
+                  <div class="item" data-value="1">Java</div>
+                  <div class="item" data-value="2">C++</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 首页图片的引用地址 -->
+        <div class="field">
+          <div class="ui left labeled input">
+            <label for="" class="ui red basic label">首页图片</label>
+            <input type="text" name="indexPicture" placeholder="首页图片引用地址">
+          </div>
+        </div>
+
+        <!-- 特效选择 -->
+        <div class="inline fields">
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="recommend" id="recommend" class="hidden" checked>
+              <label for="recommend">推荐</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="shareInfo" id="shareInfo" class="hidden">
+              <label for="shareInfo">转载声明</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="appreciation" id="appreciation" class="hidden">
+              <label for="appreciation">赞赏</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="comment" id="comment" class="hidden">
+              <label for="comment">评论</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 提示信息 -->
+        <div class="ui error message"></div>
+
+        <!-- 提交按钮 -->
+        <div class="ui right aligned container">
+          <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+          <button class="ui yellow button">保存</button>
+          <button class="ui green button">发布</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="ui inverted vertical segment blog-padded-maxsive">
+    <section class="ui center aligned container">
+      <div class="ui stackable grid inverted divided">
+        <div class="three wide column">
+          <div class="ui inverted link list">
+            <div class="item">
+              <img src="./../static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+            </div>
+          </div>
+        </div>
+        <section class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">最新博客</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">用户故事</a>
+            <a href="#" class="item">非常一般</a>
+            <a href="#" class="item">不知道干啥（？？？）</a>
+          </div>
+        </section>
+        <address class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">联系我</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Email：scpcrow@outlook.com</a>
+            <a href="#" class="item">QQ：1182256904</a>
+          </div>
+        </address>
+        <section class="seven wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">anchor-blog</h4>
+          <p class="blog-text-thin blog-text-spaced blog-opacity-mini">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Tempore et veritatis ab animi architecto nostrum
+            nisi soluta nemo dolores atque error, culpa quasi ipsa minus optio esse sunt sed at.</p>
+        </section>
+      </div>
+      <!-- 分割线 -->
+      <div class="ui inverted section divider"></div>
+      <small class="blog-text-thin blog-text-spaced blog-opacity-mini">
+        Copyright &copy; 2020 - 2021 anchor-blog Designed by helaos
+      </small>
+    </section>
+  </footer>
+
+  <!-- 导入框架 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script>
+    $('#show-button').click(function () {
+      $('.nav-item').toggleClass('blog-nav-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown();
+
+    // 表单验证
+    $('.ui.form').form({
+      fields: {
+        title: {
+          identifier:'title',
+          rules: [{
+            type: 'empty',
+            prompt: '标题：请输入博客标题'
+          }] 
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
