@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>博客分类页(・ω&lt; )★</title>
+  <title>博客标签页(・ω&lt; )★</title>
   <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
-  <link href="./static/css/index.css" rel="stylesheet">
+  <link href="./../static/css/index.css" rel="stylesheet">
   <!-- 网站 ico -->
-  <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
@@ -19,8 +19,8 @@
       <nav class="ui inverted secondary stackable menu">
         <h2 class="ui teal header item">Anchor</h2>
         <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon home"></i>首页</a>
-        <a href="#" class="nav-item item blog-nav-mobile-hide active"><i class="icon idea"></i>分类</a>
-        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon tags"></i>标签</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon idea"></i>分类</a>
+        <a href="#" class="nav-item item blog-nav-mobile-hide active"><i class="icon tags"></i>标签</a>
         <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon clone"></i>归档</a>
         <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon info"></i>关于我</a>
         <!-- 搜索框容器 -->
@@ -45,7 +45,7 @@
       <section class="ui top attached segment">
         <div class="ui middle aligned two column grid">
           <div class="column">
-            <h3 class="ui teal header">分类</h3>
+            <h3 class="ui teal header">标签</h3>
           </div>
           <div class="column right aligned">
             共 <h3 class="ui orange header blog-inline-block"> 14 </h3> 个
@@ -53,38 +53,21 @@
         </div>
       </section>
 
-      <!-- 分类标签框 -->
+      <!-- tags 框 -->
       <section class="ui attached segment blog-padded-tb-large">
         <!-- 第一个 -->
-        <div class="ui labeled button blog-margin-tiny">
-          <a href="#" class="ui basic teal button">思考与感悟</a>
-          <div class="ui basic teal left pointing label">24</div>
-        </div>
-
-        <div class="ui labeled button blog-margin-tiny">
-          <a href="#" class="ui basic button">性能</a>
-          <div class="ui basic left pointing label">24</div>
-        </div>
-        
-        <div class="ui labeled button blog-margin-tiny">
-          <a href="#" class="ui basic button">思考与感悟</a>
-          <div class="ui basic left pointing label">24</div>
-        </div>
-
-        <div class="ui labeled button blog-margin-tiny">
-          <a href="#" class="ui basic button">思考与感悟</a>
-          <div class="ui basic left pointing label">24</div>
-        </div>
-
-        <div class="ui labeled button blog-margin-tiny">
-          <a href="#" class="ui basic button">思考与感悟</a>
-          <div class="ui basic left pointing label">24</div>
-        </div>
-
-        <div class="ui labeled button blog-margin-tiny">
-          <a href="#" class="ui basic button">思考与感悟</a>
-          <div class="ui basic left pointing label">24</div>
-        </div>
+          <a href="#" target="_blank" class="ui orange tag label large blog-margin-tiny">Java</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">C++</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">JavaScript</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">Golang</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">UE4</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">Blender</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">Java</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">C++</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">JavaScript</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">Golang</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">UE4</a>
+          <a href="#" target="_blank" class="ui tag label large blog-margin-tiny">Blender</a>
       </section>
 
       <!-- 对应分类的文章列表 -->
@@ -100,33 +83,42 @@
               </p>
 
               <div class="ui stackable grid">
-                <div class="eleven wide column">
-                  <div class="ui mini horizontal link list">
-                    <div class="item">
-                      <img src="./static/images/default.png" class="ui avatar image" alt="博主头像">
-                      <div class="content">
-                        <a href="#" class="header">冯文泽</a>
+                <div class="row">
+                  <div class="eleven wide column">
+                    <div class="ui mini horizontal link list">
+                      <div class="item">
+                        <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                        <div class="content">
+                          <a href="#" class="header">冯文泽</a>
+                        </div>
+                      </div>
+  
+                      <time class="item">
+                        <i class="icon calendar"></i> 2020-12-29
+                      </time>
+  
+                      <div class="item">
+                        <i class="icon eye"></i> 233
                       </div>
                     </div>
-
-                    <time class="item">
-                      <i class="icon calendar"></i> 2020-12-29
-                    </time>
-
-                    <div class="item">
-                      <i class="icon eye"></i> 233
-                    </div>
+                  </div>
+                  <div class="five wide right aligned column">
+                    <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
                   </div>
                 </div>
-                <div class="five wide right aligned column">
-                  <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
+
+                <div class="row">
+                  <div class="column">
+                    <a href="#" class="ui mini basic teal left pointing label">方法论</a>
+                  </div>
                 </div>
+                
               </div>
             </section>
 
             <div class="five wide column">
               <a href="#" target="_blank">
-                <img src="./static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
               </a>
             </div>
           </div>
@@ -142,33 +134,42 @@
               </p>
 
               <div class="ui stackable grid">
-                <div class="eleven wide column">
-                  <div class="ui mini horizontal link list">
-                    <div class="item">
-                      <img src="./static/images/default.png" class="ui avatar image" alt="博主头像">
-                      <div class="content">
-                        <a href="#" class="header">冯文泽</a>
+                <div class="row">
+                  <div class="eleven wide column">
+                    <div class="ui mini horizontal link list">
+                      <div class="item">
+                        <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                        <div class="content">
+                          <a href="#" class="header">冯文泽</a>
+                        </div>
+                      </div>
+  
+                      <time class="item">
+                        <i class="icon calendar"></i> 2020-12-29
+                      </time>
+  
+                      <div class="item">
+                        <i class="icon eye"></i> 233
                       </div>
                     </div>
-
-                    <time class="item">
-                      <i class="icon calendar"></i> 2020-12-29
-                    </time>
-
-                    <div class="item">
-                      <i class="icon eye"></i> 233
-                    </div>
+                  </div>
+                  <div class="five wide right aligned column">
+                    <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
                   </div>
                 </div>
-                <div class="five wide right aligned column">
-                  <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
+
+                <div class="row">
+                  <div class="column">
+                    <a href="#" class="ui mini basic teal left pointing label">方法论</a>
+                  </div>
                 </div>
+                
               </div>
             </section>
 
             <div class="five wide column">
               <a href="#" target="_blank">
-                <img src="./static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
               </a>
             </div>
           </div>
@@ -184,33 +185,42 @@
               </p>
 
               <div class="ui stackable grid">
-                <div class="eleven wide column">
-                  <div class="ui mini horizontal link list">
-                    <div class="item">
-                      <img src="./static/images/default.png" class="ui avatar image" alt="博主头像">
-                      <div class="content">
-                        <a href="#" class="header">冯文泽</a>
+                <div class="row">
+                  <div class="eleven wide column">
+                    <div class="ui mini horizontal link list">
+                      <div class="item">
+                        <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                        <div class="content">
+                          <a href="#" class="header">冯文泽</a>
+                        </div>
+                      </div>
+  
+                      <time class="item">
+                        <i class="icon calendar"></i> 2020-12-29
+                      </time>
+  
+                      <div class="item">
+                        <i class="icon eye"></i> 233
                       </div>
                     </div>
-
-                    <time class="item">
-                      <i class="icon calendar"></i> 2020-12-29
-                    </time>
-
-                    <div class="item">
-                      <i class="icon eye"></i> 233
-                    </div>
+                  </div>
+                  <div class="five wide right aligned column">
+                    <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
                   </div>
                 </div>
-                <div class="five wide right aligned column">
-                  <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
+
+                <div class="row">
+                  <div class="column">
+                    <a href="#" class="ui mini basic teal left pointing label">方法论</a>
+                  </div>
                 </div>
+                
               </div>
             </section>
 
             <div class="five wide column">
               <a href="#" target="_blank">
-                <img src="./static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
               </a>
             </div>
           </div>
@@ -226,33 +236,42 @@
               </p>
 
               <div class="ui stackable grid">
-                <div class="eleven wide column">
-                  <div class="ui mini horizontal link list">
-                    <div class="item">
-                      <img src="./static/images/default.png" class="ui avatar image" alt="博主头像">
-                      <div class="content">
-                        <a href="#" class="header">冯文泽</a>
+                <div class="row">
+                  <div class="eleven wide column">
+                    <div class="ui mini horizontal link list">
+                      <div class="item">
+                        <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                        <div class="content">
+                          <a href="#" class="header">冯文泽</a>
+                        </div>
+                      </div>
+  
+                      <time class="item">
+                        <i class="icon calendar"></i> 2020-12-29
+                      </time>
+  
+                      <div class="item">
+                        <i class="icon eye"></i> 233
                       </div>
                     </div>
-
-                    <time class="item">
-                      <i class="icon calendar"></i> 2020-12-29
-                    </time>
-
-                    <div class="item">
-                      <i class="icon eye"></i> 233
-                    </div>
+                  </div>
+                  <div class="five wide right aligned column">
+                    <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
                   </div>
                 </div>
-                <div class="five wide right aligned column">
-                  <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
+
+                <div class="row">
+                  <div class="column">
+                    <a href="#" class="ui mini basic teal left pointing label">方法论</a>
+                  </div>
                 </div>
+                
               </div>
             </section>
 
             <div class="five wide column">
               <a href="#" target="_blank">
-                <img src="./static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
               </a>
             </div>
           </div>
@@ -268,33 +287,42 @@
               </p>
 
               <div class="ui stackable grid">
-                <div class="eleven wide column">
-                  <div class="ui mini horizontal link list">
-                    <div class="item">
-                      <img src="./static/images/default.png" class="ui avatar image" alt="博主头像">
-                      <div class="content">
-                        <a href="#" class="header">冯文泽</a>
+                <div class="row">
+                  <div class="eleven wide column">
+                    <div class="ui mini horizontal link list">
+                      <div class="item">
+                        <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                        <div class="content">
+                          <a href="#" class="header">冯文泽</a>
+                        </div>
+                      </div>
+  
+                      <time class="item">
+                        <i class="icon calendar"></i> 2020-12-29
+                      </time>
+  
+                      <div class="item">
+                        <i class="icon eye"></i> 233
                       </div>
                     </div>
-
-                    <time class="item">
-                      <i class="icon calendar"></i> 2020-12-29
-                    </time>
-
-                    <div class="item">
-                      <i class="icon eye"></i> 233
-                    </div>
+                  </div>
+                  <div class="five wide right aligned column">
+                    <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
                   </div>
                 </div>
-                <div class="five wide right aligned column">
-                  <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
+
+                <div class="row">
+                  <div class="column">
+                    <a href="#" class="ui mini basic teal left pointing label">方法论</a>
+                  </div>
                 </div>
+                
               </div>
             </section>
 
             <div class="five wide column">
               <a href="#" target="_blank">
-                <img src="./static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
               </a>
             </div>
           </div>
@@ -310,37 +338,47 @@
               </p>
 
               <div class="ui stackable grid">
-                <div class="eleven wide column">
-                  <div class="ui mini horizontal link list">
-                    <div class="item">
-                      <img src="./static/images/default.png" class="ui avatar image" alt="博主头像">
-                      <div class="content">
-                        <a href="#" class="header">冯文泽</a>
+                <div class="row">
+                  <div class="eleven wide column">
+                    <div class="ui mini horizontal link list">
+                      <div class="item">
+                        <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                        <div class="content">
+                          <a href="#" class="header">冯文泽</a>
+                        </div>
+                      </div>
+  
+                      <time class="item">
+                        <i class="icon calendar"></i> 2020-12-29
+                      </time>
+  
+                      <div class="item">
+                        <i class="icon eye"></i> 233
                       </div>
                     </div>
-
-                    <time class="item">
-                      <i class="icon calendar"></i> 2020-12-29
-                    </time>
-
-                    <div class="item">
-                      <i class="icon eye"></i> 233
-                    </div>
+                  </div>
+                  <div class="five wide right aligned column">
+                    <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
                   </div>
                 </div>
-                <div class="five wide right aligned column">
-                  <a href="#" target="_blank" class="ui teal basic label blog-padded-mini blog-text-thin">认知升级</a>
+
+                <div class="row">
+                  <div class="column">
+                    <a href="#" class="ui mini basic teal left pointing label">方法论</a>
+                  </div>
                 </div>
+                
               </div>
             </section>
 
             <div class="five wide column">
               <a href="#" target="_blank">
-                <img src="./static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
               </a>
             </div>
           </div>
         </section>
+
       </section>
 
       <!-- 底部分页 -->
@@ -364,7 +402,7 @@
         <div class="three wide column">
           <div class="ui inverted link list">
             <div class="item">
-              <img src="./static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+              <img src="./../static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
             </div>
           </div>
         </div>
