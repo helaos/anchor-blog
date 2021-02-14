@@ -123,6 +123,16 @@ body {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .2) !important;
 }
 
+/* position */
+.blog-fixed {
+  position: fixed !important;
+}
+
+.blog-right-bottom {
+  bottom: 10% !important;
+  right: 3% !important;
+}
+
 
 @media screen and (max-width: 768px) {
 
