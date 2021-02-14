@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>博客详情页(・ω&lt; )★</title>
   <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
-  <link href="./../static/css/index.css" rel="stylesheet">
+  <link href="./../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet">
   <!-- 页面文章样式 -->
-  <link href="./../static/css/typo.css" rel="stylesheet">
+  <link href="./../static/css/typo.css" th:href="@{/css/typo.css}" rel="stylesheet">
   <!-- 动画集成 -->
-  <link href="./../static/css/animate.css" rel="stylesheet"/>
-  <link href="./../static/css/blog.css" rel="stylesheet">
+  <link href="./../static/css/animate.css" th:href="@{/css/animate.min.css}" rel="stylesheet"/>
+  <link href="./../static/css/blog.css" th:href="@{/css/blog.css}" rel="stylesheet">
   <!-- 代码高亮 -->
-  <link href="./../static/lib/prism/css/prism.css" rel="stylesheet">
+  <link href="./../static/lib/prism/css/prism.css" th:href="@{/lib/prism/css/prism.css}" rel="stylesheet">
   <!-- 目录生成 -->
-  <link href="./../static/lib/tocbot/css/tocbot.css" rel="stylesheet">
+  <link href="./../static/lib/tocbot/css/tocbot.css" th:href="@{/lib/tocbot/css/tocbot.css}" rel="stylesheet">
   <!-- 网站 ico -->
-  <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="./../static/favicon.ico" th:href="@{/favicon.ico}" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
@@ -34,10 +34,10 @@
         <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon info"></i>关于我</a>
         <!-- 搜索框容器 -->
         <section class="nav-item right item blog-nav-mobile-hide">
-          <div class="ui inverted transparent icon input">
+          <label class="ui inverted transparent icon input">
             <input type="text" placeholder="Search...">
             <i class="icon search link"></i>
-          </div>
+          </label>
         </section>
       </nav>
     </section>
@@ -54,7 +54,7 @@
       <section class="ui top attached segment">
         <div class="ui horizontal link list">
           <div class="item">
-            <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+            <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
             <div class="content">
               <a href="#" class="header">冯文泽</a>
             </div>
@@ -72,7 +72,7 @@
 
       <!-- 图片区域 -->
       <section class="ui attached segment">
-        <img src="./../static/images/blog-background.png" alt="文章背景图" class="ui fluid rounded image">
+        <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" alt="文章背景图" class="ui fluid rounded image">
       </section>
 
       <!-- 内容 -->
@@ -176,8 +176,7 @@
           
           <p>目前已有像百姓网等全面使用 <i class="serif">Typo.css</i> 的项目，测试平台的覆盖，特别是在<abbr title="手机、平板电脑等移动平台">移动端</abbr>上还没有覆盖完主流平台，希望有能力的同学能加入测试行列，或者加入到 <i class="serif">Typo.css</i>
             的开发。加入方法：<a href="https://github.com/sofish/Typo.css">参与 <i class="serif">Typo.css</i> 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a
-              href="https://github.com/sofish/Typo.css/issues">issues</a>，或给<abbr title="Sofish Lin, author of Typo.css"
-                                                                                  role="author">我</abbr>发<a
+              href="https://github.com/sofish/Typo.css/issues">issues</a>，或给<abbr title="Sofish Lin, author of Typo.css" role="author">我</abbr>发<a
               href="mailto:sofish@icloud.com">邮件</a>。</p>
           
           
@@ -464,12 +463,12 @@ h5,h6{font-size:1em;}
             <div class="ui images pay-font">
               <!-- 支付宝 -->
               <div class="image">
-                <img src="./../static/images/Alipay.jpg" class="ui rounded bordered image pay-qr-code" alt="支付宝">
+                <img src="./../static/images/Alipay.jpg" th:src="@{/images/Alipay.jpg}" class="ui rounded bordered image pay-qr-code" alt="支付宝">
                 <div>支付宝</div>
               </div>
               <!-- 微信支付 -->
               <div class="image">
-                <img src="./../static/images/WeChat-pay.png" class="ui rounded bordered image pay-qr-code" alt="微信支付">
+                <img src="./../static/images/WeChat-pay.png" th:src="@{/images/WeChat-pay.png}" class="ui rounded bordered image pay-qr-code" alt="微信支付">
                 <div>微信支付</div>
               </div>
             </div>
@@ -481,15 +480,15 @@ h5,h6{font-size:1em;}
       <section class="ui attached positive message">
         <div class="ui middle aligned grid">
           <div class="eleven wide column">
-            <ui class="list">
+            <ul class="list">
               <li>作者：冯文泽（联系作者）</li>
               <li>发表时间：2021-02-11 09:08</li>
               <li>版权声明：Apache-2.0 License</li>
               <li>公众号转载：请在文末添加作者公众号二维码</li>
-            </ui>
+            </ul>
           </div>
           <div class="five wide column">
-            <img src="./../static/images/WeChat.jpg" class="ui right floated rounded bordered image blog-wechat-image-size" alt="作者二维码">
+            <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui right floated rounded bordered image blog-wechat-image-size" alt="作者二维码">
           </div>
         </div>
       </section>
@@ -502,7 +501,7 @@ h5,h6{font-size:1em;}
             <h3 class="ui dividing header">Comments</h3>
             <div class="comment">
               <a class="avatar">
-                <img src="./../static/images/default.png">
+                <img src="./../static/images/default.png" th:src="@{images/default.png}" alt="留言用户头像">
               </a>
               <div class="content">
                 <a class="author">Matt</a>
@@ -517,7 +516,7 @@ h5,h6{font-size:1em;}
             </div>
             <div class="comment">
               <a class="avatar">
-                <img src="./../static/images/default.png">
+                <img src="./../static/images/default.png" th:src="@{images/default.png}" alt="留言用户头像">
               </a>
               <div class="content">
                 <a class="author">Elliot Fu</a>
@@ -534,7 +533,7 @@ h5,h6{font-size:1em;}
               <div class="comments">
                 <div class="comment">
                   <a class="avatar">
-                    <img src="./../static/images/default.png">
+                    <img src="./../static/images/default.png" th:src="@{images/default.png}" alt="留言用户头像">
                   </a>
                   <div class="content">
                     <a class="author">Jenny Hess</a>
@@ -551,7 +550,7 @@ h5,h6{font-size:1em;}
             </div>
             <div class="comment">
               <a class="avatar">
-                <img src="./../static/images/default.png">
+                <img src="./../static/images/default.png" th:src="@{images/default.png}" alt="留言用户头像">
               </a>
               <div class="content">
                 <a class="author">Joe Henderson</a>
@@ -570,21 +569,23 @@ h5,h6{font-size:1em;}
         <div class="ui form">
           <!-- 评论信息 -->
           <div class="field">
-            <textarea name="content" id="" cols="30" rows="10" placeholder="请输入评论信息..."></textarea>
+            <label for="comment-info">
+              <textarea name="content" id="comment-info" cols="30" rows="10" placeholder="请输入评论信息..."></textarea>
+            </label>
           </div>
           <!-- 留言者信息 -->
           <div class="fields">
             <div class="field comment-mobile-wide comment-margin-bottom-small">
-              <div class="ui left icon input">
+              <label class="ui left icon input">
                 <i class="icon user"></i>
                 <input type="text" name="nickname" placeholder="姓名">
-              </div>
+              </label>
             </div>
             <div class="field comment-mobile-wide comment-margin-bottom-small">
-              <div class="ui left icon input">
+              <label class="ui left icon input">
                 <i class="icon mail"></i>
                 <input type="text" name="email" placeholder="邮箱">
-              </div>
+              </label>
             </div>
             <div class="field comment-mobile-wide comment-margin-bottom-small">
               <button class="ui violet button comment-mobile-wide">
@@ -616,13 +617,13 @@ h5,h6{font-size:1em;}
   </div>
 
   <!-- 页脚 -->
-  <footer class="ui inverted vertical segment blog-padded-maxsive">
+  <footer class="ui inverted vertical segment blog-padded-massive">
     <section class="ui center aligned container">
       <div class="ui stackable grid inverted divided">
         <div class="three wide column">
           <div class="ui inverted link list">
             <div class="item">
-              <img src="./../static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+              <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
             </div>
           </div>
         </div>
@@ -660,16 +661,17 @@ h5,h6{font-size:1em;}
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <!-- 平滑滚动 -->
-  <script src="./../static/lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+  <script src="./../static/lib/jquery.scrollTo/jquery.scrollTo.min.js" th:src="@{/lib/jquery.scrollTo/jquery.scrollTo.min.js}"></script>
   <!-- 代码高亮 -->
-  <script src="./../static/lib/prism/js/prism.js"></script>
+  <script src="./../static/lib/prism/js/prism.js" th:src="@{/lib/prism/js/prism.js}"></script>
   <!-- 生成目录 -->
-  <script src="./../static/lib/tocbot/js/tocbot.min.js"></script>
+  <script src="./../static/lib/tocbot/js/tocbot.min.js" th:src="@{/lib/tocbot/js/tocbot.min.js}"></script>
   <!-- 二维码生成 -->
-  <script src="./../static/lib/qrcodejs/qrcode.min.js"></script>
+  <script src="./../static/lib/qrcodejs/qrcode.min.js" th:src="@{/lib/qrcodejs/qrcode.min.js}"></script>
   <!-- 滚动侦测 -->
-  <script src="./../static/lib/waypoints/jquery.waypoints.min.js"></script>
+  <script src="./../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
   <script>
+    // 手机响应路由隐藏按钮
     $('#show-button').click(function () {
       $('.nav-item').toggleClass('blog-nav-mobile-hide');
     });

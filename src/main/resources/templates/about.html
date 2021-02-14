@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>关于沉默的我(・ω&lt; )★</title>
   <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
-  <link href="./../static/css/index.css" rel="stylesheet">
+  <link href="./../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet">
   <!-- 网站 ico -->
-  <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="./../static/favicon.ico" th:href="@{/favicon.ico}" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
@@ -25,10 +25,10 @@
         <a href="#" class="nav-item item blog-nav-mobile-hide active"><i class="icon info"></i>关于我</a>
         <!-- 搜索框容器 -->
         <section class="nav-item right item blog-nav-mobile-hide">
-          <div class="ui inverted transparent icon input">
+          <label class="ui inverted transparent icon input">
             <input type="text" placeholder="Search...">
             <i class="icon search link"></i>
-          </div>
+          </label>
         </section>
       </nav>
     </section>
@@ -44,7 +44,7 @@
       <section class="ui stackable grid">
         <div class="eleven wide column">
           <div class="ui segment">
-            <img src="./../static/images/me.png" alt="个人图片" class="ui rounded image">
+            <img src="./../static/images/me.png" th:src="@{/images/me.png}" alt="个人图片" class="ui rounded image">
           </div>
         </div>
         <aside class="five wide column">
@@ -72,12 +72,12 @@
           <!-- 链接 -->
           <div class="ui bottom attached segment">
             <a href="https://github.com/helaos" target="_blank" class="ui circular button icon"><i class="icon github"></i></a>
-            <a href="javascript:;" class="ui circular button icon wechat"><i class="icon weixin"></i></a>
-            <a href="javascript:;" class="ui circular button icon qq-show" data-content="1182256904" data-position="bottom center"><i class="icon qq"></i></a>
+            <a href="javascript:void(0)" class="ui circular button icon wechat"><i class="icon wechat"></i></a>
+            <a href="javascript:void(0)" class="ui circular button icon qq-show" data-content="1182256904" data-position="bottom center"><i class="icon qq"></i></a>
           </div>
 
           <div class="ui wechat-qr flowing popup transition hidden">
-            <img src="./../static/images/WeChat.jpg" alt="微信二维码" class="ui rounded image blog-wechat-image-size">
+            <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" alt="微信二维码" class="ui rounded image blog-wechat-image-size">
           </div>
         </aside>
       </section>
@@ -86,13 +86,13 @@
   </main>
 
   <!-- 页脚 -->
-  <footer class="ui inverted vertical segment blog-padded-maxsive">
+  <footer class="ui inverted vertical segment blog-padded-massive">
     <section class="ui center aligned container">
       <div class="ui stackable grid inverted divided">
         <div class="three wide column">
           <div class="ui inverted link list">
             <div class="item">
-              <img src="./../static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+              <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
             </div>
           </div>
         </div>

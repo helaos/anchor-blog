@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>博客首页(・ω&lt; )★</title>
   <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
-  <link href="./../static/css/index.css" rel="stylesheet">
+  <link href="./../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet">
   <!-- 网站 ico -->
-  <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="./../static/favicon.ico" th:href="@{/favicon.ico}" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
@@ -25,10 +25,10 @@
         <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon info"></i>关于我</a>
         <!-- 搜索框容器 -->
         <section class="nav-item right item blog-nav-mobile-hide">
-          <div class="ui inverted transparent icon input">
+          <label class="ui inverted transparent icon input">
             <input type="text" placeholder="Search...">
             <i class="icon search link"></i>
-          </div>
+          </label>
         </section>
       </nav>
     </section>
@@ -72,7 +72,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -95,7 +95,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -114,7 +114,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -137,7 +137,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -156,7 +156,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -179,7 +179,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -198,7 +198,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -221,7 +221,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -240,7 +240,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -263,7 +263,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -282,7 +282,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -305,7 +305,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -324,7 +324,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -347,7 +347,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -366,7 +366,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -389,7 +389,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -408,7 +408,7 @@
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
-                          <img src="./../static/images/default.png" class="ui avatar image" alt="博主头像">
+                          <img src="./../static/images/default.png" th:src="@{/images/default.png}" class="ui avatar image" alt="博主头像">
                           <div class="content">
                             <a href="#" class="header">冯文泽</a>
                           </div>
@@ -431,7 +431,7 @@
 
                 <div class="five wide column">
                   <a href="#" target="_blank">
-                    <img src="./../static/images/blog-background.png" class="ui rounded image" alt="文章封面">
+                    <img src="./../static/images/blog-background.png" th:src="@{/images/blog-background.png}" class="ui rounded image" alt="文章封面">
                   </a>
                 </div>
               </div>
@@ -554,7 +554,7 @@
           <section>
             <h4 class="ui horizontal divider header blog-margin-top-large">扫码关注我</h4>
             <div class="ui centered blog-wechat-size card">
-              <img src="./../static/images/WeChat.jpg" alt="微信二维码" class="ui rounded image">
+              <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" alt="微信二维码" class="ui rounded image">
             </div>
           </section>
 
@@ -565,13 +565,13 @@
   </main>
 
   <!-- 页脚 -->
-  <footer class="ui inverted vertical segment blog-padded-maxsive">
+  <footer class="ui inverted vertical segment blog-padded-massive">
     <section class="ui center aligned container">
       <div class="ui stackable grid inverted divided">
         <div class="three wide column">
           <div class="ui inverted link list">
             <div class="item">
-              <img src="./../static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+              <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
             </div>
           </div>
         </div>
@@ -592,9 +592,11 @@
         </address>
         <section class="seven wide column">
           <h4 class="ui inverted header blog-text-thin blog-text-spaced">anchor-blog</h4>
-          <p class="blog-text-thin blog-text-spaced blog-opacity-mini">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Tempore et veritatis ab animi architecto nostrum
-            nisi soluta nemo dolores atque error, culpa quasi ipsa minus optio esse sunt sed at.</p>
+          <p class="blog-text-thin blog-text-spaced blog-opacity-mini">
+            对一个人来说，所期望的不是别的，而仅仅是他能全力以赴和献身于一种美好事业。
+            敢于浪费哪怕一个钟头时间的人，说明他还不懂得珍惜生命的全部价值。
+            既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去。
+          </p>
         </section>
       </div>
       <!-- 分割线 -->

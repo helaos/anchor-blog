@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>博客归档(・ω&lt; )★</title>
   <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
-  <link href="./../static/css/index.css" rel="stylesheet">
+  <link href="./../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet">
   <!-- 网站 ico -->
-  <link href="./../favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="./../static/favicon.ico" th:href="@{/favicon.ico}" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
@@ -25,10 +25,10 @@
         <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon info"></i>关于我</a>
         <!-- 搜索框容器 -->
         <section class="nav-item right item blog-nav-mobile-hide">
-          <div class="ui inverted transparent icon input">
+          <label class="ui inverted transparent icon input">
             <input type="text" placeholder="Search...">
             <i class="icon search link"></i>
-          </div>
+          </label>
         </section>
       </nav>
     </section>
@@ -191,13 +191,13 @@
   </main>
 
   <!-- 页脚 -->
-  <footer class="ui inverted vertical segment blog-padded-maxsive">
+  <footer class="ui inverted vertical segment blog-padded-massive">
     <section class="ui center aligned container">
       <div class="ui stackable grid inverted divided">
         <div class="three wide column">
           <div class="ui inverted link list">
             <div class="item">
-              <img src="./../static/images/WeChat.jpg" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+              <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
             </div>
           </div>
         </div>
