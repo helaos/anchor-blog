@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(title)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:replace="${title}">博客详情页(・ω&lt; )★</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+  <link href="./../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet">
+  <!-- 页面文章样式 -->
+  <link href="./../static/css/typo.css" th:href="@{/css/typo.css}" rel="stylesheet">
+  <!-- 动画集成 -->
+  <link href="./../static/css/animate.css" th:href="@{/css/animate.min.css}" rel="stylesheet"/>
+  <link href="./../static/css/blog.css" th:href="@{/css/blog.css}" rel="stylesheet">
+  <!-- 代码高亮 -->
+  <link href="./../static/lib/prism/css/prism.css" th:href="@{/lib/prism/css/prism.css}" rel="stylesheet">
+  <!-- 目录生成 -->
+  <link href="./../static/lib/tocbot/css/tocbot.css" th:href="@{/lib/tocbot/css/tocbot.css}" rel="stylesheet">
+  <!-- 网站 ico -->
+  <link href="./../static/favicon.ico" th:href="@{/favicon.ico}" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<!-- 顶栏 -->
+<header th:fragment="menu(n)" class="ui inverted attached segment blog-header-tb-mini blog-nav-shadow">
+  <!-- 导航栏容器 -->
+  <section class="ui inverted container">
+    <nav class="ui inverted secondary stackable menu">
+      <h2 class="ui teal header item">Anchor-admin</h2>
+      <a href="#" class="nav-item item blog-nav-mobile-hide" th:classappend="${n == 1}? 'active'"><i class="icon home"></i>首页</a>
+      <a href="#" class="nav-item item blog-nav-mobile-hide" th:classappend="${n == 2}? 'active'"><i class="icon idea"></i>分类</a>
+      <a href="#" class="nav-item item blog-nav-mobile-hide" th:classappend="${n == 3}? 'active'"><i class="icon tags"></i>标签</a>
+
+      <div class="right menu nav-item blog-nav-mobile-hide">
+        <div class="ui dropdown item">
+          <div class="text">
+            <img src="./../../static/images/default.png" th:src="@{/images/default.png}" alt="用户头像" class="ui avatar image">Cifanse
+          </div>
+          <i class="icon dropdown"></i>
+          <div class="menu">
+            <a href="#" class="item">注销</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <a href="#" id="show-button" class="ui black icon button blog-top-button blog-mobile-show">
+    <i class="icon sidebar"></i>
+  </a>
+</header>
+
+
+  <!-- 页脚 -->
+  <footer th:fragment="footer" class="ui inverted vertical segment blog-padded-massive">
+    <section class="ui center aligned container">
+      <div class="ui stackable grid inverted divided">
+        <div class="three wide column">
+          <div class="ui inverted link list">
+            <div class="item">
+              <img src="./../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded image blog-wechat-image-size" alt="微信二维码">
+            </div>
+          </div>
+        </div>
+        <section class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">最新博客</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">用户故事</a>
+            <a href="#" class="item">非常一般</a>
+            <a href="#" class="item">不知道干啥（？？？）</a>
+          </div>
+        </section>
+        <address class="three wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">联系我</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Email：scpcrow@outlook.com</a>
+            <a href="#" class="item">QQ：1182256904</a>
+          </div>
+        </address>
+        <section class="seven wide column">
+          <h4 class="ui inverted header blog-text-thin blog-text-spaced">anchor-blog</h4>
+          <p class="blog-text-thin blog-text-spaced blog-opacity-mini">
+            对一个人来说，所期望的不是别的，而仅仅是他能全力以赴和献身于一种美好事业。
+            敢于浪费哪怕一个钟头时间的人，说明他还不懂得珍惜生命的全部价值。
+            既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去。
+          </p>
+        </section>
+      </div>
+      <!-- 分割线 -->
+      <div class="ui inverted section divider"></div>
+      <small class="blog-text-thin blog-text-spaced blog-opacity-mini">
+        Copyright &copy; 2020 - 2021 anchor-blog Designed by helaos
+      </small>
+    </section>
+  </footer>
+
+
+  <th:block th:fragment="script">
+    <!-- 导入框架 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <!-- 平滑滚动 -->
+    <script src="./../static/lib/jquery.scrollTo/jquery.scrollTo.min.js" th:src="@{/lib/jquery.scrollTo/jquery.scrollTo.min.js}"></script>
+    <!-- 代码高亮 -->
+    <script src="./../static/lib/prism/js/prism.js" th:src="@{/lib/prism/js/prism.js}"></script>
+    <!-- 生成目录 -->
+    <script src="./../static/lib/tocbot/js/tocbot.min.js" th:src="@{/lib/tocbot/js/tocbot.min.js}"></script>
+    <!-- 二维码生成 -->
+    <script src="./../static/lib/qrcodejs/qrcode.min.js" th:src="@{/lib/qrcodejs/qrcode.min.js}"></script>
+    <!-- 滚动侦测 -->
+    <script src="./../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+  </th:block>
+</body>
+</html>

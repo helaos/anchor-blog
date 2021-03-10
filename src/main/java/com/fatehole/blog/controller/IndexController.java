@@ -1,7 +1,10 @@
 package com.fatehole.blog.controller;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author helaos
@@ -11,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 
-    @GetMapping("/")
+    @GetMapping({"/", "/index", "index.html"})
     public String index() {
         return "index";
     }
@@ -50,4 +53,26 @@ public class IndexController {
     public String input() {
         return "admin/input";
     }
+
+    @GetMapping("/login")
+    public String login() {
+        // 获取当前用户
+        Subject subject = SecurityUtils.getSubject();
+        boolean flag = subject.isAuthenticated();
+        if (flag) {
+            return "forward:/";
+        }
+        return "admin/login";
+    }
+
+    @GetMapping("/admin/ss")
+    public String test() {
+        return "tags";
+    }
+
+    @GetMapping("/unauthorized")
+    public String unauthorized() {
+        return "about";
+    }
+
 }

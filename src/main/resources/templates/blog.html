@@ -27,11 +27,11 @@
     <section class="ui inverted container">
       <nav class="ui inverted secondary stackable menu">
         <h2 class="ui teal header item">Anchor</h2>
-        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon home"></i>首页</a>
-        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon idea"></i>分类</a>
-        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon tags"></i>标签</a>
-        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon clone"></i>归档</a>
-        <a href="#" class="nav-item item blog-nav-mobile-hide"><i class="icon info"></i>关于我</a>
+        <a href="#" th:href="@{/}" class="nav-item item blog-nav-mobile-hide"><i class="icon home"></i>首页</a>
+        <a href="#" th:href="@{/types}" class="nav-item item blog-nav-mobile-hide"><i class="icon idea"></i>分类</a>
+        <a href="#" th:href="@{/tags}" class="nav-item item blog-nav-mobile-hide"><i class="icon tags"></i>标签</a>
+        <a href="#" th:href="@{/archives}" class="nav-item item blog-nav-mobile-hide"><i class="icon clone"></i>归档</a>
+        <a href="#" th:href="@{/about}" class="nav-item item blog-nav-mobile-hide"><i class="icon info"></i>关于我</a>
         <!-- 搜索框容器 -->
         <section class="nav-item right item blog-nav-mobile-hide">
           <label class="ui inverted transparent icon input">

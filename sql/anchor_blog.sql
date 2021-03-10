@@ -32,7 +32,7 @@ create table `t_comment` (
     `email` varchar(255) null  comment '邮箱',
     `content` varchar(255) null  comment '评论内容',
     `avatar` varchar(255) null comment '头像地址',
-    `create_time` datetime null comment '创建时间',
+    `create_time` timestamp null comment '创建时间',
     `blog_id` bigint not null comment '博客ID',
     `parent_comment_id` bigint null comment '父评论',
     `author` bit not null comment '是作者',
@@ -48,8 +48,9 @@ create table `t_user` (
     `email` varchar(255) not null comment '邮箱',
     `avatar` varchar(255) null comment '头像地址',
     `type` int not null default 0 comment '用户类型',
-    `create_time` datetime null comment '创建时间',
-    `update_time` datetime null comment '修改时间',
+    `salt` varchar(255) not null comment '加密盐值',
+    `create_time` timestamp null comment '创建时间',
+    `update_time` timestamp null comment '修改时间',
     primary key (`id`) using btree
 ) comment='用户';
 
@@ -66,8 +67,8 @@ create table `t_blog` (
     `commentable` bit not null default 0 comment '是否评论',
     `published` bit not null default 0 comment '是否发布',
     `recommend` bit not null  default 0 comment '是否推荐',
-    `create_time` datetime null default null comment '创建时间',
-    `update_time` datetime null default null comment '修改时间',
+    `create_time` timestamp null default null comment '创建时间',
+    `update_time` timestamp null default null comment '修改时间',
     `type_id` bigint comment '类型ID',
     `user_id` bigint comment '用户ID',
     `comment_count` int null default 0 comment '评论数',

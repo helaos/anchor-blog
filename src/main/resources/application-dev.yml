@@ -38,3 +38,13 @@ mybatis-plus:
 
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+shiro:
+  sessionManager:
+    sessionIdCookieEnabled: true
+    sessionIdUrlRewritingEnabled: false
+  unauthorizedUrl: /unauthorized
+  successUrl: /
+  loginUrl: /login
+  web:
+    enabled: true

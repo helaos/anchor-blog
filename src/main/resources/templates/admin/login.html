@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>芝麻开门(・ω&lt; )★</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+  <link href="./../../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet">
+  <link href="./../../static/css/admin.css" th:href="@{/css/admin.css}" rel="stylesheet">
+  <!-- 网站 ico -->
+  <link href="./../../static/favicon.ico" th:href="@{/favicon.ico}" rel="shortcut icon" type="image/x-icon">
+  <style>
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+       max-width: 450px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="ui middle aligned center aligned grid">
+    <section class="column">
+      <h2 class="ui violet image header">
+        <div class="content">
+          Anchor blog 管理后台
+        </div>
+      </h2>
+      <form class="ui large form" action="#" th:action="@{/login/verify}" method="post">
+        <div class="ui segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="user icon"></i>
+              <input type="text" name="username" placeholder="用户名">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input type="password" name="password" placeholder="密码">
+            </div>
+          </div>
+          <button type="submit" class="ui fluid large violet submit button">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+        </div>
+        <div class="ui error message">?</div>
+        <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}"></div>
+      </form>
+    </section>
+  </main>
+  <!-- 导入框架 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</body>
+
+</html>
