@@ -32,11 +32,17 @@ public class ShiroConfig {
     }
 
     @Bean
-    public SessionsSecurityManager securityManager(UserRealm userRealm) {
+    public SessionsSecurityManager securityManager(UserRealm userRealm, DefaultWebSessionManager defaultWebSessionManager) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         // 关联UserRealm
         securityManager.setRealm(userRealm);
+        securityManager.setSessionManager(defaultWebSessionManager);
         return securityManager;
+    }
+
+    @Bean
+    public DefaultWebSessionManager defaultWebSessionManager() {
+        return new DefaultWebSessionManager();
     }
 
     /**
@@ -60,7 +66,6 @@ public class ShiroConfig {
         chainDefinition.addPathDefinition("/admin/**", "perms[admin:*]");
         chainDefinition.addPathDefinition("/login", "anon");
         chainDefinition.addPathDefinition("/**", "anon");
-        chainDefinition.addPathDefinition("/logout", "logout");
         return chainDefinition;
     }
 
